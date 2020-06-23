@@ -5,18 +5,16 @@ import java.awt.Graphics;
 
 public class RectangleCreux extends Dessin {
 
-	int r, g, b;
+	Color color;
 	
-	RectangleCreux (int r, int g, int b) {
-		this.r = r;
-		this.g = g;
-		this.b = b;
+	RectangleCreux(Color color) {
+		this.color = color;
 	}
 	
 	@Override
-	public void paint (Graphics g) {
+	public void paint(Graphics g) {
 		super.paint(g);
-		g.setColor(new Color(this.r, this.g, this.b));
+		g.setColor(this.color);
 		g.drawRect(0, 0, getWidth()-1, getHeight()-1);
 	}
 }

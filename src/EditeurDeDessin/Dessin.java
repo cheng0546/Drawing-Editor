@@ -21,7 +21,7 @@ abstract class Dessin extends JPanel {
 	CreateurRectangleCreux rectangleCreux;
 	ElipseCreuse elipseCreuse;
 	
-	public Dessin () {
+	public Dessin() {
 		MyMouseListener myMouseListener = new MyMouseListener();
 		addMouseListener(myMouseListener);
 		MyMouseMotionListener myMouseMotionListener = new MyMouseMotionListener();
@@ -31,40 +31,40 @@ abstract class Dessin extends JPanel {
 	class MyMouseListener implements MouseListener {
 				
 		@Override
-		public void mousePressed (MouseEvent e) {
+		public void mousePressed(MouseEvent e) {
 			xStart = e.getX();
 			yStart = e.getY();
 			//point = getLocation();
 		}
 		
 		@Override
-		public void mouseClicked (MouseEvent e) {
+		public void mouseClicked(MouseEvent e) {
 
 		}
 		
-		public void mouseReleased (MouseEvent e) {
+		public void mouseReleased(MouseEvent e) {
 			
 		}
 			
-		public void mouseEntered (MouseEvent e) {
+		public void mouseEntered(MouseEvent e) {
 			
 		}
 		
-		public void mouseExited (MouseEvent e) {
+		public void mouseExited(MouseEvent e) {
 			
 		}
 	}
 		
 	class MyMouseMotionListener implements MouseMotionListener {
 		@Override
-		public void mouseDragged (MouseEvent e) {
+		public void mouseDragged(MouseEvent e) {
 			xEnd = e.getX();
 			yEnd = e.getY();
 			//setSize(w, h);
-			setLocation(getLocation().x + (xEnd - xStart), getLocation().y + (yEnd - yStart));
+			setLocation(getLocation().x +(xEnd - xStart), getLocation().y +(yEnd - yStart));
 		}
 		
-		public void mouseMoved (MouseEvent e) {
+		public void mouseMoved(MouseEvent e) {
 			
 		}
 	}

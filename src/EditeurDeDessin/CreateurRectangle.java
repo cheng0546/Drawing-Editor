@@ -1,9 +1,11 @@
 package EditeurDeDessin;
 
+import java.awt.Color;
+
 public class CreateurRectangle implements CreateurDessin {
 	
-	public Rectangle creerDessin (int r, int g, int b) {
-		return new Rectangle(r, g, b);
+	public Rectangle creerDessin(Color color) {
+		return new Rectangle(color);
 	}
 
 }

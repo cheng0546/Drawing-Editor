@@ -1,8 +1,10 @@
 package EditeurDeDessin;
 
+import java.awt.Color;
+
 public class CreateurElipseCreuse implements CreateurDessin {
 	
-	public ElipseCreuse creerDessin (int r, int g, int b) {
-		return new ElipseCreuse(r, g, b);
+	public ElipseCreuse creerDessin(Color color) {
+		return new ElipseCreuse(color);
 	}
 }

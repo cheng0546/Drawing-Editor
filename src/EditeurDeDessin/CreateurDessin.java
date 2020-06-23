@@ -1,5 +1,7 @@
 package EditeurDeDessin;
 
+import java.awt.Color;
+
 public interface CreateurDessin {
-	public Dessin creerDessin (int r, int g, int b);
+	public Dessin creerDessin(Color color);
 }

@@ -5,18 +5,16 @@ import java.awt.Graphics;
 
 public class ElipseCreuse extends Dessin {
 	
-	int r, g, b;
+	Color color;
 	
-	ElipseCreuse (int r, int g, int b) {
-		this.r = r;
-		this.g = g;
-		this.b = b;
+	ElipseCreuse(Color color) {
+		this.color = color;
 	}
 	
 	@Override
-	public void paint (Graphics g) {
+	public void paint(Graphics g) {
 		super.paint(g);
-		g.setColor(new Color(this.r, this.g, this.b));
+		g.setColor(this.color);
 		g.drawOval(0, 0, getWidth()-1, getHeight()-1);
 	}
 }
