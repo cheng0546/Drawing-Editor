@@ -74,7 +74,7 @@ public class ZoneDeDessin extends JPanel {
 		public void mouseDragged(MouseEvent e) {
 			xEnd = e.getX();
 			yEnd = e.getY();
-			dessin.setBounds(xStart, yStart, xEnd-xStart, yEnd-yStart);
+			dessin.setBounds(Math.min(xStart, xEnd), Math.min(yStart, yEnd), Math.abs(xEnd-xStart), Math.abs(yEnd-yStart));
 		}
 		
 		public void mouseMoved(MouseEvent e) {

@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 import java.awt.GridLayout;
 
-
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
@@ -18,12 +18,16 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 
 
 
 public class Editeur extends JFrame {
 	
 	ZoneDeDessin zoneDeDessin;
+	DessinPrevu dessinPrevu;
+	Color color = Color.BLACK;
+	CreateurDessin createurDessin = new CreateurRectangle();
 	
 	public Editeur() {
 		setDefaultLookAndFeelDecorated(true);
@@ -31,10 +35,21 @@ public class Editeur extends JFrame {
 		setSize(900, 600);
 		setDefaultCloseOperation(Editeur.EXIT_ON_CLOSE);
 		
-		addZoneDeDessin();  // Creation de zone de dessin	
-		addMenu();  // Ajoute de menus
-		addButton();  // Ajoute de bouton	
+		addZoneDeDessin();  // Creation de zone de dessin
 		
+		JPanel btnAndMenu = new JPanel();
+		btnAndMenu.setLayout(new BorderLayout());
+		getContentPane().add(btnAndMenu, BorderLayout.WEST);
+		
+		addMenu(btnAndMenu);  // Ajoute de menus
+		addButton(btnAndMenu);  // Ajoute de bouton	
+		
+		JPanel dessinPrevuPanel = new JPanel();
+		dessinPrevuPanel.setPreferredSize(new Dimension(125, 110));
+		btnAndMenu.add(dessinPrevuPanel, BorderLayout.SOUTH);
+		dessinPrevu = new DessinPrevu(this.createurDessin, this.color);
+		dessinPrevu.setPreferredSize(new Dimension(125, 110));
+		dessinPrevuPanel.add(dessinPrevu);
 	}
 	
 	public void addZoneDeDessin() {
@@ -46,39 +61,48 @@ public class Editeur extends JFrame {
 		getContentPane().add(zoneDeDessin, BorderLayout.CENTER);
 	}
 	
-	public void addShapeActionListenerForButton(JButton bouton, CreateurDessin createurDessin) {
+	public void addShapeActionListenerForButton(JRadioButton bouton, CreateurDessin selectedCreateurDessin) {
 		bouton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				zoneDeDessin.defineShape(createurDessin);
+				zoneDeDessin.defineShape(selectedCreateurDessin);
+				dessinPrevu.setShape(selectedCreateurDessin);
+				dessinPrevu.repaint();
 			}
 		});
 	}
 	
-	public void addColorActionListenerForButton(JButton bouton, Color color) {
+	public void addColorActionListenerForButton(JButton bouton, Color selectedColor) {
 		bouton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				zoneDeDessin.defineColor(color);
+				zoneDeDessin.defineColor(selectedColor);
+				dessinPrevu.setColor(selectedColor);
+				dessinPrevu.repaint();
 			}
 		});
 	}
 	
-	public void addShapeActionListenerForMenu(JMenuItem menu, CreateurDessin createurDessin) {
+	public void addShapeActionListenerForMenu(JMenuItem menu, CreateurDessin selectedCreateurDessin) {
 		menu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				zoneDeDessin.defineShape(createurDessin);
+				zoneDeDessin.defineShape(selectedCreateurDessin);
+				dessinPrevu.setShape(selectedCreateurDessin);
+				dessinPrevu.repaint();
 			}
 		});
 	}
 	
-	public void addColorActionListenerForMenu(JMenuItem menu, Color color) {
+	public void addColorActionListenerForMenu(JMenuItem menu, Color selectedColor) {
 		menu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				zoneDeDessin.defineColor(color);
+				zoneDeDessin.defineColor(selectedColor);
+				dessinPrevu.setColor(selectedColor);
+				dessinPrevu.repaint();
 			}
 		});
 	}
 	
-	public void addMenu() {
+	public void addMenu(JPanel btnAndMenu) {
+		
 		// Creation de menu bar
 		
 		JPanel menu = new JPanel();
@@ -87,7 +111,7 @@ public class Editeur extends JFrame {
 		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setPreferredSize(new Dimension(600,50));
-		menuBar.setBackground(Color.WHITE);
+		menuBar.setBackground(Color.lightGray);
 		menu.add(menuBar);
 		
 		// Creation de menu de type
@@ -151,17 +175,20 @@ public class Editeur extends JFrame {
                     return;
                 }
                 zoneDeDessin.defineColor(selectedColor);
+                dessinPrevu.setColor(selectedColor);
+				dessinPrevu.repaint();
 			}
 		});
 		colorMenu.add(mnOther);
 	}
 	
-	public void addButton() {
+	public void addButton(JPanel btnAndMenu) {
+		
 		// Creation de boutons de couleur
 		
 		JPanel colorGroup = new JPanel();
 		colorGroup.setLayout(new GridLayout(5, 1, 10, 5));
-		getContentPane().add(colorGroup, BorderLayout.EAST);
+		btnAndMenu.add(colorGroup, BorderLayout.EAST);
 		
 		JButton btnYellow= new JButton();
 		btnYellow.setBackground(Color.YELLOW);
@@ -192,6 +219,8 @@ public class Editeur extends JFrame {
                     return;
                 }
                 zoneDeDessin.defineColor(selectedColor);
+                dessinPrevu.setColor(selectedColor);
+				dessinPrevu.repaint();
 			}
 		});
 		colorGroup.add(btnOther);	
@@ -200,23 +229,28 @@ public class Editeur extends JFrame {
 		
 		JPanel btnGroup = new JPanel();
 		btnGroup.setLayout(new GridLayout(4, 1, 10, 5));
-		getContentPane().add(btnGroup, BorderLayout.WEST);
+		btnAndMenu.add(btnGroup, BorderLayout.WEST);
 		
-		JButton btnRectangle= new JButton("Rectangle");
+		ButtonGroup buttonGroup = new ButtonGroup();
+		JRadioButton btnRectangle= new JRadioButton("Rectangle", true);
 		addShapeActionListenerForButton(btnRectangle, new CreateurRectangle());
 		btnGroup.add(btnRectangle);
+		buttonGroup.add(btnRectangle);
 		
-		JButton btnElipse= new JButton("Elipse");
+		JRadioButton btnElipse= new JRadioButton("Elipse");
 		addShapeActionListenerForButton(btnElipse, new CreateurElipse());
 		btnGroup.add(btnElipse);
+		buttonGroup.add(btnElipse);
 		
-		JButton btnRectangleCreux= new JButton("Rectangle Creux");
+		JRadioButton btnRectangleCreux= new JRadioButton("Rectangle Creux");
 		addShapeActionListenerForButton(btnRectangleCreux, new CreateurRectangleCreux());
 		btnGroup.add(btnRectangleCreux);
+		buttonGroup.add(btnRectangleCreux);
 		
-		JButton btnElipseCreuse= new JButton("Elipse Creuse");
+		JRadioButton btnElipseCreuse= new JRadioButton("Elipse Creuse");
 		addShapeActionListenerForButton(btnElipseCreuse, new CreateurElipseCreuse());
 		btnGroup.add(btnElipseCreuse);
+		buttonGroup.add(btnElipseCreuse);
 	}
 	
 	public static void main(String[] args) {
