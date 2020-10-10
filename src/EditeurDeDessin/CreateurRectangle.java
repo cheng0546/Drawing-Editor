@@ -1,6 +1,6 @@
 package EditeurDeDessin;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class CreateurRectangle implements CreateurDessin {
 	
@@ -8,4 +8,7 @@ public class CreateurRectangle implements CreateurDessin {
 		return new Rectangle(color);
 	}
 
+	public void paintDessinPrevu(Graphics g) {
+		g.fillRect(0, 0, 120, 90);
+	}
 }

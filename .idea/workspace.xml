@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22495a49-b201-4c51-9a2f-8ebca8bdea1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/EditeurDeDessin/Editeur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/Editeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/Editeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurDessin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurDessin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurElipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurElipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurElipseCreuse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurElipseCreuse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurRectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurRectangleCreux.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/CreateurRectangleCreux.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EditeurDeDessin/DessinPrevu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditeurDeDessin/DessinPrevu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,27 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Editeur" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EditeurDeDessin.Editeur" />
+      <module name="IHM-TP2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EditeurDeDessin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Editeur" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,6 +89,9 @@
       <workItem from="1574614805165" duration="185000" />
       <workItem from="1575219865632" duration="95000" />
       <workItem from="1592521720173" duration="337000" />
+      <workItem from="1602067131239" duration="1744000" />
+      <workItem from="1602084110131" duration="1885000" />
+      <workItem from="1602346509640" duration="915000" />
     </task>
     <servers />
   </component>
@@ -86,5 +108,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602084197527">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1602084197527" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1602347256248">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/74.-768.1366.768@0.0.1440.900" timestamp="1602346531884" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1602347256248" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1602347256247">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900/74.-768.1366.768@0.0.1440.900" timestamp="1602346531881" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1602347256247" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1602347256246">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900/74.-768.1366.768@0.0.1440.900" timestamp="1602346531880" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1602347256246" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1602347256247">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/74.-768.1366.768@0.0.1440.900" timestamp="1602346531882" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1602347256247" />
+    <state x="488" y="159" key="RollbackChangesDialog" timestamp="1602347187684">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="488" y="159" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1602347187684" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1602085335388">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1602085335388" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1602085237209">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1602085237209" />
   </component>
 </project>

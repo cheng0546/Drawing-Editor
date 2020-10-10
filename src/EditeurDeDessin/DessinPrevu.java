@@ -26,22 +26,6 @@ public class DessinPrevu extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		g.setColor(this.color);
-		switch(this.drawingShape.getClass().getName()) {
-		case "EditeurDeDessin.CreateurRectangle":
-			g.fillRect(0, 0, 120, 90);
-			break;
-		case "EditeurDeDessin.CreateurElipse":
-			g.fillOval(0, 0, 120, 90);
-			break;
-		case "EditeurDeDessin.CreateurRectangleCreux":
-			g.drawRect(0, 0, 120, 90);
-			break;
-		case "EditeurDeDessin.CreateurElipseCreuse":
-			g.drawOval(0, 0, 120, 90);
-			break;
-		default:
-			g.fillRect(0, 0, 120, 90);
-			break;
-		}
+		this.drawingShape.paintDessinPrevu(g);
 	}
 }
